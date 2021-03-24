@@ -25,6 +25,8 @@ jobs:
     needs: ['lint']
     name: 'Build and Push Docker Container'
     runs-on: 'ubuntu-20.04'
+    if: |
+      !contains(github.ref, 'dependabot')
     steps:
       - uses: 'actions/checkout@v2'
       - name: 'Get calculated next version based on commit history'
