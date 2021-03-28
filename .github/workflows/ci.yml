@@ -48,6 +48,7 @@ jobs:
             VERSION=${GITHUB_REF#refs/tags/}
           fi
           if [[ $GITHUB_REF == refs/heads/* ]]; then
+            VERSION=${GITHUB_REF#refs/heads/}
             if [[ $VERSION == main ]]; then
               VERSION=latest
             else
