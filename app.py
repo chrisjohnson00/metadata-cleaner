@@ -27,9 +27,7 @@ def main():
 
     for message in consumer:
         message_body = message.value
-        logger.info("Processing new message {}".format(message_body))
         cleanup_metadata(message_body)
-        logger.info("Done processing message {}".format(message_body))
         # force commit
         consumer.commit_async()
 
@@ -37,6 +35,7 @@ def main():
 def cleanup_metadata(message_body):
     file_path = message_body['file_path']
     message_hash = get_md5_hex_hash(file_path)
+    logger.info("Processing new message {}".format(message_body), extra={'message_hash': message_hash})
     filename, file_extension = os.path.splitext(file_path)
     command = ['exiftool', file_path]
     logger.debug(" ".join(command), extra={'message_hash': message_hash})
@@ -54,6 +53,7 @@ def cleanup_metadata(message_body):
         subprocess.run(command, check=True, capture_output=True, text=True)
     else:
         logger.info("{} does not have a Title".format(file_path), extra={'message_hash': message_hash})
+    logger.info("Done processing message {}".format(message_body), extra={'message_hash': message_hash})
 
 
 def get_config(key, config_path=CONFIG_PATH):
