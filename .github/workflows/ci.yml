@@ -42,7 +42,7 @@ jobs:
       - name: 'Prepare'
         id: 'prep'
         run: |
-          DOCKER_IMAGE=chrisjohnson00/metadata-cleaner
+          DOCKER_IMAGE=${{ github.repository }}
           VERSION=edge
           if [[ $GITHUB_REF == refs/tags/* ]]; then
             VERSION=${GITHUB_REF#refs/tags/}
@@ -88,9 +88,9 @@ jobs:
           cache-from: 'type=local,src=/tmp/.buildx-cache'
           cache-to: 'type=local,dest=/tmp/.buildx-cache'
           labels: |
-            org.opencontainers.image.documentation=https://github.com/chrisjohnson00/metadata-cleaner
+            org.opencontainers.image.documentation=https://github.com/${{ github.repository }}
             org.opencontainers.image.version=${{ steps.prep.outputs.version }}
-            org.opencontainers.image.source=https://github.com/chrisjohnson00/metadata-cleaner
+            org.opencontainers.image.source=https://github.com/${{ github.repository }}
             org.opencontainers.image.revision=${{ github.sha }}
   yaml_lint:
     name: 'Yaml Lint'
