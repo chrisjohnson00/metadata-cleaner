@@ -64,7 +64,7 @@ jobs:
         uses: 'actions/cache@v2.1.4'
         with:
           path: '/tmp/.buildx-cache'
-          key: '${{ runner.os }}-buildx-${{ steps.prep.outputs.version }}-${{ github.sha }}'
+          key: '${{ runner.os }}-buildx-${{ steps.prep.outputs.version }}'
           restore-keys: |
             ${{ runner.os }}-buildx-
             ${{ runner.os }}-buildx-${{ steps.prep.outputs.version }}
