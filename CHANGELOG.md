@@ -1,8 +1,20 @@
 # Changelog
 
+## [v0.2.3](https://github.com/chrisjohnson00/metadata-cleaner/tree/v0.2.3) (2021-04-11)
+
+[Full Changelog](https://github.com/chrisjohnson00/metadata-cleaner/compare/v0.2.2...v0.2.3)
+
+**Merged pull requests:**
+
+- ci: no push for dependabot branches [\#13](https://github.com/chrisjohnson00/metadata-cleaner/pull/13) ([chrisjohnson00](https://github.com/chrisjohnson00))
+
 ## [v0.2.2](https://github.com/chrisjohnson00/metadata-cleaner/tree/v0.2.2) (2021-04-11)
 
 [Full Changelog](https://github.com/chrisjohnson00/metadata-cleaner/compare/v0.2.1...v0.2.2)
+
+**Merged pull requests:**
+
+- ci: fixing docker push to be dynamic rather than hard coded containers [\#12](https://github.com/chrisjohnson00/metadata-cleaner/pull/12) ([chrisjohnson00](https://github.com/chrisjohnson00))
 
 ## [v0.2.1](https://github.com/chrisjohnson00/metadata-cleaner/tree/v0.2.1) (2021-04-11)
 
@@ -10,7 +22,6 @@
 
 **Merged pull requests:**
 
-- ci: fixing docker push to be dynamic rather than hard coded containers [\#12](https://github.com/chrisjohnson00/metadata-cleaner/pull/12) ([chrisjohnson00](https://github.com/chrisjohnson00))
 - ci: reverting skipping ci based on commit message [\#11](https://github.com/chrisjohnson00/metadata-cleaner/pull/11) ([chrisjohnson00](https://github.com/chrisjohnson00))
 
 ## [v0.2.0](https://github.com/chrisjohnson00/metadata-cleaner/tree/v0.2.0) (2021-04-11)
