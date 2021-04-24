@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.2.8](https://github.com/chrisjohnson00/metadata-cleaner/tree/v0.2.8) (2021-04-24)
+
+[Full Changelog](https://github.com/chrisjohnson00/metadata-cleaner/compare/v0.2.7...v0.2.8)
+
+**Merged pull requests:**
+
+- build: upgrade pip on docker build [\#18](https://github.com/chrisjohnson00/metadata-cleaner/pull/18) ([chrisjohnson00](https://github.com/chrisjohnson00))
+
 ## [v0.2.7](https://github.com/chrisjohnson00/metadata-cleaner/tree/v0.2.7) (2021-04-24)
 
 [Full Changelog](https://github.com/chrisjohnson00/metadata-cleaner/compare/v0.2.6...v0.2.7)
