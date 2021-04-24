@@ -27,7 +27,11 @@ def main():
 
     for message in consumer:
         message_body = message.value
-        cleanup_metadata(message_body)
+        logger.debug("Message body", extra={'message_body': message_body})
+        if is_valid_message(message_body):
+            cleanup_metadata(message_body)
+        else:
+            logger.warning("Message skipped due to valid check", extra={'message_body': message_body})
         # force commit
         consumer.commit_async()
 
@@ -69,6 +73,10 @@ def get_config(key, config_path=CONFIG_PATH):
 def get_md5_hex_hash(string_to_hash):
     result = hashlib.md5(string_to_hash.encode())
     return result.hexdigest()
+
+
+def is_valid_message(message):
+    return message['type'] is not None and message['file_path'] is not None
 
 
 if __name__ == '__main__':
