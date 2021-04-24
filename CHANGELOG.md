@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.2.4](https://github.com/chrisjohnson00/metadata-cleaner/tree/v0.2.4) (2021-04-24)
+
+[Full Changelog](https://github.com/chrisjohnson00/metadata-cleaner/compare/v0.2.3...v0.2.4)
+
+**Fixed bugs:**
+
+- fix: None type for file path string [\#17](https://github.com/chrisjohnson00/metadata-cleaner/pull/17) ([chrisjohnson00](https://github.com/chrisjohnson00))
+
 ## [v0.2.3](https://github.com/chrisjohnson00/metadata-cleaner/tree/v0.2.3) (2021-04-11)
 
 [Full Changelog](https://github.com/chrisjohnson00/metadata-cleaner/compare/v0.2.2...v0.2.3)
@@ -23,6 +31,7 @@
 **Merged pull requests:**
 
 - ci: reverting skipping ci based on commit message [\#11](https://github.com/chrisjohnson00/metadata-cleaner/pull/11) ([chrisjohnson00](https://github.com/chrisjohnson00))
+- ci: skipping container build for dependabot branches [\#3](https://github.com/chrisjohnson00/metadata-cleaner/pull/3) ([chrisjohnson00](https://github.com/chrisjohnson00))
 
 ## [v0.2.0](https://github.com/chrisjohnson00/metadata-cleaner/tree/v0.2.0) (2021-04-11)
 
@@ -36,7 +45,6 @@
 
 - chore: bump wagoid/commitlint-github-action from v3.0.6 to v3.1.0 [\#9](https://github.com/chrisjohnson00/metadata-cleaner/pull/9) ([dependabot[bot]](https://github.com/apps/dependabot))
 - chore: bump mathieudutour/github-tag-action from v5.3 to v5.4 [\#5](https://github.com/chrisjohnson00/metadata-cleaner/pull/5) ([dependabot[bot]](https://github.com/apps/dependabot))
-- ci: skipping container build for dependabot branches [\#3](https://github.com/chrisjohnson00/metadata-cleaner/pull/3) ([chrisjohnson00](https://github.com/chrisjohnson00))
 
 ## [v0.1.0](https://github.com/chrisjohnson00/metadata-cleaner/tree/v0.1.0) (2021-03-24)
 
