@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.2.7](https://github.com/chrisjohnson00/metadata-cleaner/tree/v0.2.7) (2021-04-24)
+
+[Full Changelog](https://github.com/chrisjohnson00/metadata-cleaner/compare/v0.2.6...v0.2.7)
+
+**Merged pull requests:**
+
+- ci: rename ci workflow file [\#19](https://github.com/chrisjohnson00/metadata-cleaner/pull/19) ([chrisjohnson00](https://github.com/chrisjohnson00))
+
 ## [v0.2.6](https://github.com/chrisjohnson00/metadata-cleaner/tree/v0.2.6) (2021-04-24)
 
 [Full Changelog](https://github.com/chrisjohnson00/metadata-cleaner/compare/v0.2.5...v0.2.6)
