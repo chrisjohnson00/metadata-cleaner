@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.2.9](https://github.com/chrisjohnson00/metadata-cleaner/tree/v0.2.9) (2021-07-26)
+
+[Full Changelog](https://github.com/chrisjohnson00/metadata-cleaner/compare/v0.2.8...v0.2.9)
+
+**Fixed bugs:**
+
+- fix: if ffmpeg was not able to finish the tmp copy it would fail on re-try [\#42](https://github.com/chrisjohnson00/metadata-cleaner/pull/42) ([chrisjohnson00](https://github.com/chrisjohnson00))
+
 ## [v0.2.8](https://github.com/chrisjohnson00/metadata-cleaner/tree/v0.2.8) (2021-04-24)
 
 [Full Changelog](https://github.com/chrisjohnson00/metadata-cleaner/compare/v0.2.7...v0.2.8)
