@@ -1,9 +1,9 @@
-certifi==2020.12.5
-chardet==4.0.0
-idna==2.10
+certifi==2021.5.30
+charset-normalizer==2.0.3
+idna==3.2
 kafka-python==2.0.2
 pygogo==0.13.2
 python-consul==1.1.0
-requests==2.25.1
-six==1.15.0
-urllib3==1.26.4
+requests==2.26.0
+six==1.16.0
+urllib3==1.26.6
