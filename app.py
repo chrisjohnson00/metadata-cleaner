@@ -42,18 +42,18 @@ def cleanup_metadata(message_body):
     logger.info("Processing new message", extra={'message_hash': message_hash, 'message_body': message_body})
     filename, file_extension = os.path.splitext(file_path)
     command = ['exiftool', file_path]
-    logger.debug(" ".join(command), extra={'message_hash': message_hash})
+    logger.debug("Exiftool command", extra={'message_hash': message_hash, 'command': " ".join(command)})
     completed_process = subprocess.run(command, check=True, capture_output=True, text=True)
-    logger.debug(completed_process.stdout, extra={'message_hash': message_hash})
+    logger.info("Exiftool Results", extra={'message_hash': message_hash, 'output': completed_process.stdout})
     if 'Title' in completed_process.stdout:
         # ffmpeg -i input.m4v -c copy -metadata title= output.m4v
-        command = ['ffmpeg', '-i', file_path, '-c', 'copy', '-metadata', 'title=',
+        command = ['ffmpeg', '-y', '-i', file_path, '-c', 'copy', '-metadata', 'title=',
                    "{}-tmp{}".format(filename, file_extension)]
-        logger.debug(" ".join(command), extra={'message_hash': message_hash})
+        logger.debug("ffmpeg command", extra={'message_hash': message_hash, 'command': " ".join(command)})
         completed_process = subprocess.run(command, check=True, capture_output=True, text=True)
-        logger.debug(completed_process.stdout, extra={'message_hash': message_hash})
-        command = ['mv', "{}-tmp{}".format(filename, file_extension), file_path]
-        logger.debug(" ".join(command), extra={'message_hash': message_hash})
+        logger.debug("ffmpeg output", extra={'message_hash': message_hash, 'output': completed_process.stdout})
+        command = ['mv', f"{filename}-tmp{file_extension}", file_path]
+        logger.debug("mv command", extra={'message_hash': message_hash, 'command': " ".join(command)})
         subprocess.run(command, check=True, capture_output=True, text=True)
     else:
         logger.info("{} does not have a Title".format(file_path), extra={'message_hash': message_hash})
@@ -79,5 +79,11 @@ def is_valid_message(message):
     return message['type'] is not None and message['file_path'] is not None
 
 
+def test_main():
+    message_body = {"type": "movie", "file_path": "/movies/Lost in Translation (2003).mkv"}
+    cleanup_metadata(message_body)
+
+
 if __name__ == '__main__':
-    main()
+    # main()
+    test_main()
