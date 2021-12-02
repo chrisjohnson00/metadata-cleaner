@@ -45,9 +45,9 @@ def cleanup_metadata(message_body):
     logger.debug("Exiftool command", extra={'message_hash': message_hash, 'command': " ".join(command)})
     completed_process = subprocess.run(command, check=True, capture_output=True, text=True)
     logger.info("Exiftool Results", extra={'message_hash': message_hash, 'output': completed_process.stdout})
-    if 'Title' in completed_process.stdout:
-        # ffmpeg -i input.m4v -c copy -metadata title= output.m4v
-        command = ['ffmpeg', '-y', '-i', file_path, '-c', 'copy', '-metadata', 'title=',
+    if any(x in completed_process.stdout for x in ['Title', 'Comment']):
+        # ffmpeg -i input.m4v -c copy -metadata title= -metadata comment= output.m4v
+        command = ['ffmpeg', '-y', '-i', file_path, '-c', 'copy', '-metadata', 'title=', '-metadata', 'comment=',
                    "{}-tmp{}".format(filename, file_extension)]
         logger.debug("ffmpeg command", extra={'message_hash': message_hash, 'command': " ".join(command)})
         completed_process = subprocess.run(command, check=True, capture_output=True, text=True)
@@ -56,7 +56,7 @@ def cleanup_metadata(message_body):
         logger.debug("mv command", extra={'message_hash': message_hash, 'command': " ".join(command)})
         subprocess.run(command, check=True, capture_output=True, text=True)
     else:
-        logger.info("{} does not have a Title".format(file_path), extra={'message_hash': message_hash})
+        logger.info("{} does not have a Title or Comment".format(file_path), extra={'message_hash': message_hash})
     logger.info("Done processing message", extra={'message_hash': message_hash})
 
 

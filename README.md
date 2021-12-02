@@ -14,4 +14,4 @@ Hacky hacky, but update `app.py` to call `test_main()` instead of `main()` and p
 This will skip all Kafka logic.
 
     docker build . -t mds
-    docker run -it --rm -v ${PWD}:/movies mdc
+    docker run -it --rm -v ${PWD}:/movies mds
