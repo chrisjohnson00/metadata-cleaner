@@ -18,7 +18,8 @@ def main():
     logger.info("Starting!!")
 
     client = pulsar.Client(f"pulsar://{get_config('PULSAR_SERVER')}")
-    consumer = client.subscribe(get_config('PULSAR_TOPIC'), get_config('PULSAR_SUBSCRIPTION'))
+    consumer = client.subscribe(get_config('PULSAR_TOPIC'), get_config('PULSAR_SUBSCRIPTION'),
+                                consumer_type=pulsar.ConsumerType.Shared)
 
     while True:
         msg = consumer.receive()
