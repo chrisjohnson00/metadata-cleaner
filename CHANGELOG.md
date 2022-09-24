@@ -1,5 +1,23 @@
 # Changelog
 
+## [v0.2.10](https://github.com/chrisjohnson00/metadata-cleaner/tree/v0.2.10) (2022-09-24)
+
+[Full Changelog](https://github.com/chrisjohnson00/metadata-cleaner/compare/v0.2.9...v0.2.10)
+
+**Breaking changes:**
+
+- refactor: replace kafka with pulsar [\#117](https://github.com/chrisjohnson00/metadata-cleaner/pull/117) ([chrisjohnson00](https://github.com/chrisjohnson00))
+
+**Fixed bugs:**
+
+- fix: adding comment stripping [\#59](https://github.com/chrisjohnson00/metadata-cleaner/pull/59) ([chrisjohnson00](https://github.com/chrisjohnson00))
+
+**Merged pull requests:**
+
+- chore: bump actions/cache from 2.1.5 to 2.1.6 [\#45](https://github.com/chrisjohnson00/metadata-cleaner/pull/45) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore: bump mathieudutour/github-tag-action from 5.5 to 5.6 [\#44](https://github.com/chrisjohnson00/metadata-cleaner/pull/44) ([dependabot[bot]](https://github.com/apps/dependabot))
+- chore: bump docker/login-action from 1.9.0 to 1.10.0 [\#43](https://github.com/chrisjohnson00/metadata-cleaner/pull/43) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v0.2.9](https://github.com/chrisjohnson00/metadata-cleaner/tree/v0.2.9) (2021-07-26)
 
 [Full Changelog](https://github.com/chrisjohnson00/metadata-cleaner/compare/v0.2.8...v0.2.9)
