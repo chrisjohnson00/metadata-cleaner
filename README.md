@@ -4,7 +4,7 @@ A video metadata cleaner that reads from a Kafka topic
 ## PyPi Dependency updates
 
     pip install --upgrade pip
-    pip install --upgrade kafka-python pygogo python-consul
+    pip install --upgrade pulsar-client pygogo python-consul
     pip freeze > requirements.txt
     sed -i '/pkg_resources/d' requirements.txt
 
